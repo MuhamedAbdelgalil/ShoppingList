@@ -1,0 +1,115 @@
+body{
+   background:  #f4f5f6;
+}
+
+/*Start Nav bar*/
+
+.navbar .container>.navbar-header, .navbar .container-fluid>.navbar-header, .navbar .container>.navbar-collapse, .navbar .container-fluid>.navbar-collapse{
+    margin-left: 44%;
+    line-height:.5em
+}
+.navbar-brand{
+    font-size:30px
+}
+/*End Nav bar*/
+
+/*Start Content*/
+
+.content{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    min-height: 450px;
+}
+
+#searchTxt{
+        width: 130px;
+        margin-bottom: 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+#searchTxt:focus{
+    width: 100%;
+    
+}
+.add-item{
+    width: 10%
+}
+.w3-ul{
+    max-height: 330px;
+    overflow-y: scroll;
+}
+
+
+.items-div ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.inputs-div{
+    width: 100%;
+
+}
+.add-item-text{
+    width: 50%;
+    float: right
+   
+}
+.add-item-btn{
+    width: 50%;
+
+    float: left
+}
+.item-li{
+    background: #fff;
+}
+.line-sep{
+    border-top: 1px solid #000;
+}
+
+/*End content*/
+
+.footer{
+    padding: 50px
+}
+
+
+
+
+
+
+
+
+
+
+/* style media for header*/
+
+
+@media (max-width:550px){
+        .navbar .container>.navbar-header, .navbar .container-fluid>.navbar-header, .navbar .container>.navbar-collapse, .navbar .container-fluid>.navbar-collapse{
+    margin-left: 19%;
+  }
+}
+@media (min-width:551px) and (max-width: 640px) {
+
+.navbar .container>.navbar-header, .navbar .container-fluid>.navbar-header, .navbar .container>.navbar-collapse, .navbar .container-fluid>.navbar-collapse{
+    margin-left: 32%;
+}
+
+
+}
+
+/*@media (max-width: 900px) {
+
+.navbar .container>.navbar-header, .navbar .container-fluid>.navbar-header, .navbar .container>.navbar-collapse, .navbar .container-fluid>.navbar-collapse{
+    margin-left: 32%;
+}
+
+
+}*/
+
+
+@media (min-width:641px) {
+    .navbar .container>.navbar-header, .navbar .container-fluid>.navbar-header, .navbar .container>.navbar-collapse, .navbar .container-fluid>.navbar-collapse{
+    margin-left: 39%;
+  }
+}

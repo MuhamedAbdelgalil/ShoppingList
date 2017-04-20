@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html ng-app="shoppingList">
+
+<head>
+    <title>Shopping List</title>
+    <link rel='stylesheet' type="text/css" href='./vendors/bootstrap/dist/css/bootstrap.min.css'>
+
+    <link rel='stylesheet' type="text/css" href="./vendors/flat-ui/dist/css/flat-ui.min.css">
+    <link rel='stylesheet' type="text/css" href='./vendors/font-awesome/css/font-awesome.min.css'>
+    <link rel='stylesheet' type="text/css" href='./css/main.css'>
+    <link rel='stylesheet' type="text/css" href='./css/w3.css'>
+
+    <!--[if lt IE 9]>
+        <script src="./vendors/flat-ui/dist/js/vendor/html5shiv.js"></script>
+        <script src="./vendors/flat-ui/dist/js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-cloak>
+
+    <!--Start Nav bar -->
+    <div class="text-center">
+
+        <nav class="navbar navbar-default text-center">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                    Shopping List
+                </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--End Nav bar -->
+
+    <!--Start Content -->
+    <section ng-cloak class="content" ng-controller="mainController">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+
+                            <div ng-if="!Items.length > 0" class="alert alert-warning">
+                                Your List Is Empty.
+                            </div>
+                            <div ng-if="ErrorMessage" class="alert alert-danger">
+                                This item is already Exist!
+                            </div>
+                            
+                            <input id="searchTxt" class="form-control" type="text" ng-model="searchValue" placeholder="Search.." />
+                            <ul class="w3-ul">
+                                <li ng-repeat="x in Items | filter:searchValue" class="item-li w3-padding-16" id="item-{{x}}">{{x}}
+                                    <span ng-click="removeItem($index)" style="cursor:pointer;" class="w3-right w3-margin-right">×</span>
+</li>
+</ul>
+</div>
+
+</div>
+<hr class="line-sep" />
+<div class="row inputs-div text-center">
+
+    <form class="form-group">
+        <div class="col-sm-6">
+            <input type="text" ng-model="itemValue" placeholder="type shopping item" class="form-control add-item-text" />
+
+        </div>
+        <div class="col-sm-6">
+            <input type="submit" class="form-control btn btn-primary add-item-btn" ng-click="addItem()" value="Add New Item" />
+        </div>
+    </form>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<add-item></add-item>
+
+<!--End Content -->
+
+<!--Start Footer -->
+<footer class="footer text-center">
+    <div class="container  navbar-default">
+        <div class="row">
+            <div class="col-sm-12">
+                <strong>My Footer</strong>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!--End Footer -->
+
+
+<!--Scripts-->
+
+<script type="text/javascript" src='./vendors/jquery/dist/jquery.min.js'></script>
+<script type="text/javascript" src='./vendors/angular/angular.min.js'></script>
+<script type="text/javascript" src='./js/angular-material/angular-material.js'></script>
+<script type="text/javascript" src='./js/app.js'></script>
+<script type="text/javascript" src='./js/controllers/mainController.js'></script>
+<script type="text/javascript" src='./js/directives/addItem.js'></script>
+
+</body>
+
+</html>
